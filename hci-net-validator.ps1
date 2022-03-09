@@ -9,20 +9,8 @@
 #
 # Modify the NODExx and ServerList variables below to map to the names of the target HCI nodes you are looking to deploy.
 ###############################################################################
-#Set Name of Node01
-$Node01 = "!!!NODE_NAME_HERE!!!"
-
-#Set Name of Node02
-$Node02 = "!!!NODE_NAME_HERE!!!"
-
-#Set Name of Node02
-$Node03 = "!!!NODE_NAME_HERE!!!"
-
-#Set Name of Node02
-$Node04 = "!!!NODE_NAME_HERE!!!"
-
 #Set ServerList - if you have more (or less) nodes in your cluster, adjust this variable accordingly!
-$ServerList = $Node01, $Node02, $Node03, $Node04
+$ServerList = (Get-Clusternode).Name
 ###############################################################################
 
 
